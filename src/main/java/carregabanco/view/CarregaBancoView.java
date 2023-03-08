@@ -1,17 +1,19 @@
 package carregabanco.view;
 
 import java.util.ArrayList;
-
 import carregabanco.controller.CarregaBancoController;
-import carregabanco.model.PessoaModel;
+import carregabanco.model.AlunoModel;
 
 public class CarregaBancoView {
 	public CarregaBancoView() {
-		ArrayList<PessoaModel> valores = new CarregaBancoController().loader("alunostads.csv");
-		System.out.println(valores.size());
+		CarregaBancoController carregaBancoController = new CarregaBancoController();
+		ArrayList<AlunoModel> valores = carregaBancoController.loader("alunostads.csv");
+		//carregaBancoController.inserirNoBanco(valores);
 		
-		for(PessoaModel n: valores)
-			System.out.println(n.getCampus() + " - " + n.getNomePessoa());
+		//A parte da visualização seria isso
+		System.out.println(valores.size());
+		for(AlunoModel n: valores)
+			System.out.println(n.getCampus() + " - " + n.getNome_estudante()+ " - " + n.getIdade());
 		
 	}
 }
