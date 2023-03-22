@@ -14,8 +14,8 @@ public class CarregaBancoView {
 		System.out.println(valores.size());
 		for(AlunoModel n: valores)
 			System.out.println(n.getCampus() + " - " + n.getNome_estudante()+ " - " + n.getIdade());
-		
+		asadada
 		*/
-		
+	
 	}
 }
